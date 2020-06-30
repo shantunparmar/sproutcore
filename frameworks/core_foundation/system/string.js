@@ -162,7 +162,7 @@ SC.mixin(SC.String, {
       // Also, .loc() is not called SO much to begin with. So, the error handling
       // that this gives us is worth it.
       try {
-        return SC.String.fmt(localized, args);      
+        return SC.String.fmt(localized, args);
       } catch (e) {
         SC.error("Error processing string with key: " + str);
         SC.error("Localized String: " + localized);
@@ -312,26 +312,26 @@ SC.mixin(SC.String, {
   trimRight: function (str) {
     return str.replace(SC.STRING_TRIM_RIGHT_REGEXP,"");
   },
-  
+
   /**
     Mulitplies a given string. For instance if you have a string "xyz"
     and multiply it by 2 the result is "xyzxyz".
-    
+
     @param {String} str the string to multiply
     @param {Number} value the number of times to multiply the string
     @returns {String} the mulitiplied string
   */
   mult: function(str, value) {
     if (SC.typeOf(value) !== SC.T_NUMBER || value < 1) return null;
-    
+
     var ret = "";
     for (var i = 0; i < value; i += 1) {
       ret += str;
     }
-    
+
     return ret;
   }
-  
+
 });
 
 
@@ -377,7 +377,7 @@ function _(string) {
 };
 
 function ngettext(string1, string2, n) {
-  return n > 1 ? string2 : string1;
+  return (n > 1 ? string2 : string1).loc();
 };
 
 
