@@ -3,7 +3,6 @@
 
 SproutCore 2: For Native-Caliber Web Apps
 =======
-
 > **Sproutcore 2** no longer support the *Abbot Buildtools* which has been replaced by the new [Node.js Build Tools](https://github.com/sproutcore/build-tools).
 
 SproutCore is a JS-MVC framework for building blazing-fast, native-caliber web
